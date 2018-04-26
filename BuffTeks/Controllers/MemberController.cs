@@ -53,7 +53,7 @@ namespace BuffTeks.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,StudentID,FName,LName,Major,PhoneNumber,Email")] Member member)
+        public async Task<IActionResult> Create([Bind("StudentID,Major,ID,FName,LName,PhoneNumber,Email")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace BuffTeks.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,StudentID,FName,LName,Major,PhoneNumber,Email")] Member member)
+        public async Task<IActionResult> Edit(int id, [Bind("StudentID,Major,ID,FName,LName,PhoneNumber,Email")] Member member)
         {
             if (id != member.ID)
             {

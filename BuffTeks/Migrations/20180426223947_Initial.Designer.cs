@@ -11,9 +11,10 @@ using System;
 namespace BuffTeks.Migrations
 {
     [DbContext(typeof(BuffTeksDBContext))]
-    partial class BuffTeksDBContextModelSnapshot : ModelSnapshot
+    [Migration("20180426223947_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
